@@ -1,19 +1,47 @@
-body {
+* {
+  padding:0;
+  margin:0;
+}
 
+body {
   font-family: "Helvetica Neue", Helvetica, Verdana, sans-serif;
   font-size: 13px;
-  margin-left: 20px;
   color: #333;
-
 }
 
-#container {
+#main {
+  margin: 20px;
   margin-top:30px;
-  width:1200px;
 }
 
+#footer {
+  height:20px;
+  width:100%;
+  
+  position: fixed;
+  bottom: 0px;
+
+  padding:10px;
+  
+  border-top:1px solid #999;
+  
+  background-color:#333;
+  font-size:0.9em;
+  color:#aaa;
+}
+
+#footer a {
+  color: #aaa;
+}
+
+a {
+  color: #000;
+}
+
+/* LEFT SIDE: EDITOR */
 #editor {
-  float:left;
+  width:620px;
+  min-height:450px;
 }
 
 #tools {
@@ -21,46 +49,66 @@ body {
 }
 
 #tools .toolbutton {
-  border: 1px solid #999;
-  background-color: #eee;
-  display:block;
   width: auto;
+  
   float:left;
+  margin-right:5px;
+  padding: 5px;
+
+  border: 1px solid #999;
   border-radius:8px;
+  
+  background-color: #eee;
+
 }
 
+
+/* RIGHT SIDE: PREVIEW */
 #preview {
-  float: left;
-  min-height:400px;
-  margin-left:50px;
+  min-height:450px;
+  min-width:400px;
   padding: 20px;
-  width:500px;
+  
   border-left:1px solid #999;
+  
+  color: #000;
 }
 
-preview p {
-  text-align:justify;
-  width:500px;
-  overflow: scroll;
+
+/* CONTENT STYLING */
+#preview h1, h2 {
+  padding-bottom:10px;
 }
 
-blockquote {
+#preview p {
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+#preview blockquote {
   margin-left:5px;
-  background-color:#eee;
   padding:1px;
   padding-left:5px;
+  
   border-left:1px solid #999;
-  text-align:justify;
+  
+  background-color:#eee;
 }
 
-code, pre {
+#preview code, pre {
 	font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
   background-color:#eee;
 }
 
-pre {
-  padding:3px;
+#preview pre {
+  padding:5px;
+  margin-left:5px;
   display:block;
+  width:auto;
+}
+
+#preview code {
+  display:inline;
 }
 
 

@@ -10,16 +10,13 @@
     <!-- jQuery and Syntax Highlight -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://github.com/balupton/jquery-syntaxhighlighter/raw/master/scripts/jquery.syntaxhighlighter.min.js"></script>
-    <script type="text/javascript">
-      
-    </script>
     
     <!-- WMD -->
     <script type="text/javascript" src="wmd/showdown.js"></script>
     <script type="text/javascript" src="wmd/wmd.js"></script>
     
     <!-- Additional scripts -->
-    <script type="text/javascript" src="js/select.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
     
     <!-- jQuery listener for syntax highlight -->
     <script type="text/javascript">
@@ -43,22 +40,32 @@
   </head>
   <body>
 
-    <h1>online markdown editor</h1>
-    <div id="intro">based on <a href="http://github.com/innocead/wmd">wmd</a> // uses <a href="http://balupton.com/projects/jquery-syntaxhighlighter">jQuery syntax highlighter</a> // current <a href="issues.html">issues</a></div>
 
-    <div id="container">
-      <div id="editor">
-        <div id="toolbar" class="wmd-toolbar"></div>
-        <textarea id="input" class="wmd-input" rows="30" cols="80"></textarea>
-        <div id="tools">
-          <button id="highlightCode" class="toolbutton">Highlight Code</button>
-          <button id="selectall" class="toolbutton" onclick="selectAll();">Select all preview text</button>
-        </div>
-      </div>
-      <div id="preview" class="wmd-preview">
-      </div>
+
+    <table id="main">
+      <tr>
+        <td valign="top">
+          <div id="editor">
+            <div id="toolbar" class="wmd-toolbar"></div>
+            <textarea id="input" class="wmd-input" rows="30" cols="80"></textarea>
+            <div id="tools">
+              <button id="highlightCode" class="toolbutton">Highlight Code</button>
+              <button id="selectall" class="toolbutton" onclick="selectAll();">Select all preview text</button>
+              <button id="copyall" class="toolbutton" onclick="copyAll();">Copy to clipboard</button>
+            </div>
+          </div>
+        </td>
+        <td valign="top">
+          <div id="preview" class="wmd-preview">
+          </div>
+        </td>
+      </tr>
+    </table>
+    
+    <div id="footer">
+        <strong>online markdown editor</strong> written by <a href="http://homepage.univie.ac.at/werner.robitza">werner robitza</a> // based on <a href="http://github.com/innocead/wmd">wmd</a> // uses <a href="http://balupton.com/projects/jquery-syntaxhighlighter">jQuery syntax highlighter</a> // current <a href="issues.html">issues</a>
     </div>
-
+    
   </body>
 </html>
 
