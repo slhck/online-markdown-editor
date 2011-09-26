@@ -1,0 +1,16 @@
+{
+  "name": "Markdown Editor",
+  "description": "A very basic Markdown editor that outputs live, selectable HTML and supports syntax highlighting",
+  "version": "0.0.0.1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "app": {
+    "urls": [
+      "http://homepage.univie.ac.at/werner.robitza/markdown"
+    ],
+    "launch": {
+      "web_url": "http://homepage.univie.ac.at/werner.robitza/markdown/index.html"
+    }
+  }
+}

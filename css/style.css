@@ -58,7 +58,6 @@ margin-bottom: 1.5em;
 
 #preview pre, blockquote {
 line-height: 1.714em;
-padding: .857em 1em;
 margin-bottom: 1.714em;
 }
 
@@ -124,7 +123,8 @@ text-decoration: underline;
 #preview blockquote {
   margin-left:5px;
   padding:1px;
-  padding-left:5px;
+  padding-left:10px;
+  padding-right:10px;
   border-left:1px solid #999;
   background-color:#eee;
 }
@@ -139,6 +139,7 @@ text-decoration: underline;
   margin-left:5px;
   display:block;
   width:auto;
+  overflow: auto;
 }
 
 #preview code {
