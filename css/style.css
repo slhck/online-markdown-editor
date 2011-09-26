@@ -9,40 +9,12 @@ body {
   color: #333;
 }
 
-#main {
-  margin: 20px;
-  margin-top:30px;
-}
-
-#footer {
-  height:20px;
-  width:100%;
-  
-  position: fixed;
-  bottom: 0px;
-
-  padding:10px;
-  
-  border-top:1px solid #999;
-  
-  background-color:#333;
-  font-size:0.9em;
-  color:#aaa;
-}
-
-#footer a {
-  color: #aaa;
-}
-
-a {
-  color: #000;
-}
-
 /* LEFT SIDE: EDITOR */
 #editor {
-  width:620px;
-  min-height:450px;
-
+  width:600px;
+  position:fixed;
+  left:20px;
+  top:20px;
 }
 
 #tools {
@@ -50,49 +22,110 @@ a {
 }
 
 #tools .toolbutton {
-  width: auto;
-  
+  width: auto;  
   float:left;
   margin-right:5px;
   padding: 5px;
-
   border: 1px solid #999;
   border-radius:8px;
-  
   background-color: #eee;
-
 }
 
 
 /* RIGHT SIDE: PREVIEW */
 #preview {
   min-height:450px;
-  min-width:400px;
+  width:500px;
   padding: 20px;
   border-left:1px solid #999;
-  
-  color: #000;
+  position:relative;
+  left:620px;
+  color:#000;
 }
 
 
 /* CONTENT STYLING */
-#preview h1, h2 {
-  padding-top:10px;
-  padding-bottom:5px;
+#preview p, dt, dd {
+font-size: 1.0em;
+line-height: 1.5em;
 }
 
 #preview p {
-  padding-bottom: 5px;
-  padding-top: 10px;
+text-align: justify;
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+}
+
+#preview pre, blockquote {
+line-height: 1.714em;
+padding: .857em 1em;
+margin-bottom: 1.714em;
+}
+
+#preview h1 {
+font-size: 2.25em;
+line-height: 1.333em;
+margin-top: 0.22em;
+margin-bottom: 0.5em;
+}
+
+#preview h2 {
+font-size: 1.5em;
+line-height: 1.0em;
+margin-top: 1.5em;
+margin-bottom: 0.5em;
+}
+
+#preview h3 {
+font-size: 1.125em;
+line-height: 1.333em;
+margin-top: 1.333em;
+margin-bottom: 0;
+}
+
+#preview h4 {
+font-size: 1.0em;
+line-height: 1.5em;
+margin-top: 1.5em;
+margin-bottom: 0;
+}
+
+#preview h1 + h2 {
+margin-top: -1.6em;
+}
+
+#preview hr {
+margin-top: 1.6em;
+}
+
+#preview hr + h2 {
+margin-top: 0.5em;
+}
+
+#preview input {
+font-size: 1.0em;
+}
+
+#preview ul {
+list-style: square;
+}
+#preview li {
+padding-bottom:10px;
+line-height: 1.6em;
+}
+#preview a {
+color:#069;
+text-decoration: none;
+}
+#preview a:hover {
+text-decoration: underline;
 }
 
 #preview blockquote {
   margin-left:5px;
   padding:1px;
   padding-left:5px;
-  
   border-left:1px solid #999;
-  
   background-color:#eee;
 }
 
@@ -116,5 +149,22 @@ a {
   margin-left:20px;
 }
 
+#footer {
+  height:20px;
+  width:100%;
+  
+  position: fixed;
+  bottom: 0px;
 
+  padding:10px;
+  
+  border-top:1px solid #999;
+  
+  background-color:#333;
+  font-size:0.9em;
+  color:#aaa;
+}
 
+#footer a {
+  color: #aaa;
+}

@@ -42,3 +42,7 @@
 	color: #006699;
 	font-weight: bold;
 }
+
+.prettyprint {
+  border:none !important;
+}
