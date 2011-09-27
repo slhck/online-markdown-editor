@@ -1,5 +1,5 @@
 .prettyprint.theme-balupton {
-	font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
+
 }
 .prettyprint.theme-balupton .com {
 	color: #008200; /* balupton green */
@@ -41,8 +41,4 @@
 .prettyprint.theme-balupton .kwd {
 	color: #006699;
 	font-weight: bold;
-}
-
-.prettyprint {
-  border:none !important;
 }

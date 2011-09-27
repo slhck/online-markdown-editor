@@ -132,6 +132,7 @@ text-decoration: underline;
 #preview code, pre {
 	font-family: Consolas, 'Bitstream Vera Sans Mono', 'Courier New', Courier, monospace;
   background-color:#eee;
+  font-size:1.0em;
 }
 
 #preview pre {
@@ -139,7 +140,12 @@ text-decoration: underline;
   margin-left:5px;
   display:block;
   width:auto;
-  overflow: auto;
+  overflow: auto !important;
+}
+
+/* HAX: Disable all borders from prettify */
+#preview * {
+  border:none !important;
 }
 
 #preview code {
