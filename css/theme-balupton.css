@@ -1,5 +1,5 @@
-.prettyprint.theme-balupton {
-
+.prettyprint {
+  padding: 0px !important; /* Hack for inline code */
 }
 .prettyprint.theme-balupton .com {
 	color: #008200; /* balupton green */
