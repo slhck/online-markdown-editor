@@ -25,3 +25,20 @@ function selectElementText(el, win) {
         range.execCommand("Copy");
     }
 }
+
+function toHtml() {
+OpenWindow=window.open("", "newwin", "height=842, width=750,toolbar=no,scrollbars=yes,menubar=no");
+var target = document.getElementById('preview');
+var wrap = document.createElement('body');
+wrap.appendChild(target.cloneNode(true));
+OpenWindow.document.write("<html>\
+  <head>\
+    <title>online markdown editor</title>\
+    <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\
+    \
+    <!-- Styles -->\
+    <link href=\"css/print_style.css\" rel=\"stylesheet\"></link>\
+    </head>");
+OpenWindow.document.write(wrap.innerHTML);
+OpenWindow.document.close();
+}
