@@ -9,36 +9,6 @@
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
     <link type="text/css" rel="stylesheet" href="css/theme-balupton.css"/>
     
-    <!-- jQuery and Syntax Highlight -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://github.com/balupton/jquery-syntaxhighlighter/raw/master/scripts/jquery.syntaxhighlighter.min.js"></script>
-    
-    <!-- WMD -->
-    <script type="text/javascript" src="wmd/showdown.js"></script>
-    <script type="text/javascript" src="wmd/wmd.js"></script>
-    
-    <!-- Additional scripts -->
-    <script type="text/javascript" src="js/functions.js"></script>
-    
-    <!-- jQuery listener for syntax highlight -->
-    <script type="text/javascript">
-    $(document).ready(function() {
-      $("#highlightCode").click(function(){
-        $.SyntaxHighlighter.init({
-        'lineNumbers': false,
-        'debug': true
-        });
-      });
-    });
-    </script>
-    
-    <!-- Initialize WMD -->
-    <script type="text/javascript">
-    window.onload = function() {
-      new WMD("input", "toolbar", { preview: "preview" });
-    };
-    </script>
-    
   </head>
   <body>
 
@@ -60,6 +30,29 @@
         <strong>online markdown editor</strong> written by <a href="http://homepage.univie.ac.at/werner.robitza">werner robitza</a> // based on <a href="http://github.com/innocead/wmd">wmd</a> // uses <a href="http://balupton.com/projects/jquery-syntaxhighlighter">jQuery syntax highlighter</a> and icons by <a href="http://p.yusukekamiyamane.com/">Yusuke Kamiyamane</a> // current <a href="issues.html">issues</a>
     </div>
     
+        <!-- jQuery and Syntax Highlight -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://github.com/balupton/jquery-syntaxhighlighter/raw/master/scripts/jquery.syntaxhighlighter.min.js"></script>
+    
+    <!-- WMD -->
+    <script type="text/javascript" src="wmd/showdown.js"></script>
+    <script type="text/javascript" src="wmd/wmd.js"></script>
+    
+    <!-- Additional scripts -->
+    <script type="text/javascript" src="js/functions.js"></script>
+    
+    <!-- jQuery listener for syntax highlight -->
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#highlightCode").click(function(){
+        $.SyntaxHighlighter.init({
+        'lineNumbers': false,
+        'debug': true
+        });
+      });
+      new WMD("input", "toolbar", { preview: "preview" });
+    });
+    </script>
   </body>
 </html>
 
