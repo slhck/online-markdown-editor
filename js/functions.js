@@ -3,23 +3,6 @@ function selectAll() {
   selectElementText(document.getElementById("preview"));
 }
 
-var myInput = document.getElementById("preview");
-    if(myInput.addEventListener ) {
-        myInput.addEventListener('keydown',this.keyHandler,false);
-    } else if(myInput.attachEvent ) {
-        myInput.attachEvent('onkeydown',this.keyHandler); /* damn IE hack */
-    }
-
-    function keyHandler(e) {
-        var TABKEY = 9;
-        if(e.keyCode == TABKEY) {
-            this.value += "    ";
-            if(e.preventDefault) {
-                e.preventDefault();
-            }
-            return false;
-        }
-    }
 // Copies text to clipboard
 function copyAll() {
   alert("Not implemented yet!");
@@ -42,6 +25,18 @@ function selectElementText(el, win) {
         range.execCommand("Copy");
     }
 }
+ $(document).ready(function(){
+    $(".wmd-input").bind('keydown', function(e){
+        var TABKEY = 9;
+        if(e.keyCode == TABKEY) {
+            this.value += "    ";
+            if(e.preventDefault) {
+                e.preventDefault();
+            }
+            return false;
+        }
+    }); 
+});
 
 function toHtml() {
 OpenWindow=window.open("", "newwin", "height=842, width=750,toolbar=no,scrollbars=yes,menubar=no");
